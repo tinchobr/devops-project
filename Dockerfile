@@ -10,7 +10,7 @@ RUN npm install
 COPY . .
 
 # Ejecutamos pruebas
-RUN npx jest --forceExit
+RUN npm test
 
 # Etapa 2: Imagen de Producción
 FROM node:18-alpine
