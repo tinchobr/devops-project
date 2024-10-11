@@ -1,8 +1,11 @@
 services:
-  web:
+  api:
     build:
       context: .
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
+      - NEW_RELIC_NO_CONFIG_FILE=true
+      - NEW_RELIC_LICENSE_KEY=36301150aeb5e7c59f33693e477cce6cFFFFNRAL
+      - NEW_RELIC_APP_NAME=devops-project
