@@ -53,7 +53,7 @@ docker-compose up
 La API estará disponible en `http://localhost:5000`.
 
 ## Monitoreo
-La aplicación está configurada para enviar métricas a New Relic. Asegúrate de tener las credenciales necesarias configuradas en el archivo `newrelic.js`.
+La aplicación está configurada para enviar métricas a New Relic.
 
 ## CI/CD
 Se ha implementado un flujo de trabajo de GitHub Actions para la integración y entrega continua. Esto incluye la instalación de dependencias, la construcción del proyecto, la ejecución de pruebas y el despliegue automático en Render.
@@ -62,6 +62,7 @@ Se ha implementado un flujo de trabajo de GitHub Actions para la integración y 
 - **GET /health**: Verifica el estado de la API.
 - **POST /users**: Crea un nuevo usuario.
 - **GET /users**: Obtiene todos los usuarios.
+- **GET /users/:id**: Obtiene un usuario.
 - **PUT /users/:id**: Actualiza un usuario existente.
 - **DELETE /users/:id**: Elimina un usuario.
 
