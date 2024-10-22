@@ -28,6 +28,22 @@ describe('API Endpoints', () => {
     expect(res.body.length).toBeGreaterThan(0);
   });
 
+  it('should fetch a user by ID', async () => {
+    // Create a user first
+    await request(app)
+      .post('/users')
+      .send({
+        name: 'Jane Doe',
+        email: 'janedoe@example.com',
+      });
+
+    // Now fetch the user by ID
+    const res = await request(app).get('/users/1');
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toHaveProperty('id', 1);
+    expect(res.body).toHaveProperty('name', 'John Doe'); // Assuming this is the first user created
+  });
+
   it('should update an existing user', async () => {
     const res = await request(app)
       .put('/users/1')
