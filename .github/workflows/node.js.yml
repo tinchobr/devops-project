@@ -62,6 +62,6 @@ jobs:
     steps:
       - name: Deploy
         env:
-          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}&imgURL=docker.io/martinobr11/devops-project:${{ github.sha }}
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}&imgURL=docker.io/martinobr11/devops-project:latest
         run: |
           curl "$deploy_url"
