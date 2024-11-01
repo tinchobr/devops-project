@@ -18,7 +18,7 @@ describe('API Endpoints', () => {
       });
     expect(res.statusCode).toEqual(201);
     expect(res.body).toHaveProperty('id');
-    expect(res.body).toHaveProperty('name', 'John Doe1');
+    expect(res.body).toHaveProperty('name', 'John Doe');
     expect(res.body).toHaveProperty('email', 'johndoe@example.com');
   });
 
