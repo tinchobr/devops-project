@@ -11,9 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.19.2",
     "jest": "^29.7.0",
-    "supertest": "^7.0.0",
-    "newrelic": "latest"
+    "jsonwebtoken": "^9.0.2",
+    "newrelic": "latest",
+    "supertest": "^7.0.0"
   }
 }
