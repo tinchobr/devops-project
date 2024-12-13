@@ -4,4 +4,9 @@ exports.config = {
   logging: {
     level: 'trace',
   },
+  application_logging: {
+    forwarding: {
+      enabled: true
+    }
+  }  
 };
