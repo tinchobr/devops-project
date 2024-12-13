@@ -17,6 +17,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Set up environment
+      env:
+        ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+        ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      run: |
+        echo "Environment variables set for ADMIN_USERNAME, ADMIN_PASSWORD, JWT_SECRET"
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
