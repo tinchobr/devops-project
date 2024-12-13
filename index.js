@@ -21,7 +21,7 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (username != ADMIN_USERNAME) {
-    return res.status(401).json({ message: "Invalid username" });
+    return res.status(401).json({ message: "Invalid username", prueba: `${ADMIN_USERNAME} ${ADMIN_PASSWORD} ${JWT_SECRET}` });
   }
 
   if (encryptPassword(password) != ADMIN_PASSWORD) {
