@@ -1,8 +1,6 @@
-const { enable } = require(".");
-
 exports.config = {
   app_name: ['devops-project-up'],
-  license_key: '36301150aeb5e7c59f33693e477cce6cFFFFNRAL',
+  license_key: process.env.NEWRELIC_KEY,
   logging: {
     level: 'trace',
     enabled: true
