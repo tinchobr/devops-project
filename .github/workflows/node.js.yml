@@ -52,9 +52,9 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
-          echo "ADMIN_USERNAME: $ADMIN_USERNAME" >> debug_secrets.txt
-          echo "ADMIN_PASSWORD: $ADMIN_PASSWORD" >> debug_secrets.txt
-          echo "JWT_SECRET: $JWT_SECRET" >> debug_secrets.txt
+          echo "ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}" >> debug_secrets.txt
+          echo "ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}" >> debug_secrets.txt
+          echo "JWT_SECRET: ${{ secrets.JWT_SECRET }}" >> debug_secrets.txt
           cat debug_secrets.txt
       - name: Clean up secrets file
         run: rm debug_secrets.txt
