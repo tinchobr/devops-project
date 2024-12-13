@@ -55,7 +55,7 @@ jobs:
           echo "ADMIN_USERNAME is set: ${{ secrets.ADMIN_USERNAME }}"
           echo "ADMIN_PASSWORD is set: ${{ secrets.ADMIN_PASSWORD }}"
           echo "JWT_SECRET is set: ${{ secrets.JWT_SECRET }}"
-          echo "s is set: ${{ secrets }}"
+          echo "secret is set: ${{ secrets }}"
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
