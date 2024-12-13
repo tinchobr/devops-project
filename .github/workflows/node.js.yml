@@ -46,15 +46,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ github.repository }}
-      - name: Verify Secrets
+      - name: Build and push Docker image
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-        run: |
-          echo "ADMIN_USERNAME is set: ${{ secrets.ADMIN_USERNAME }}"
-          echo "ADMIN_PASSWORD is set: ${{ secrets.ADMIN_PASSWORD }}"
-          echo "JWT_SECRET is set: ${{ secrets.JWT_SECRET }}"
-      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
