@@ -13,7 +13,7 @@ jest.mock('jsonwebtoken', () => ({
 let token;
 
 beforeAll(() => {
-  token = 'mocked-token'; // Token mockeado
+  token = 'mocked-token';
 });
 
 describe('API Endpoints', () => {
