@@ -1,6 +1,6 @@
 exports.config = {
   app_name: ['devops-project-up'],
-  license_key: process.env.NEWRELIC_KEY,
+  license_key: process.env.NEW_RELIC_LICENSE_KEY,
   logging: {
     level: 'trace',
     enabled: true
