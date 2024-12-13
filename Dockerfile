@@ -6,20 +6,6 @@ WORKDIR /app
 # Copiamos los archivos necesarios
 COPY package*.json ./
 
-# Recibir variables de entorno desde build-args
-ARG ADMIN_USERNAME
-ARG ADMIN_PASSWORD
-ARG JWT_SECRET
-
-RUN echo "ADMIN_USERNAME=$ADMIN_USERNAME"
-RUN echo "ADMIN_PASSWORD=$ADMIN_PASSWORD"
-RUN echo "JWT_SECRET=$JWT_SECRET"
-
-# Configurar variables de entorno en la imagen
-ENV ADMIN_USERNAME=$ADMIN_USERNAME \
-    ADMIN_PASSWORD=$ADMIN_PASSWORD \
-    JWT_SECRET=$JWT_SECRET
-
 RUN npm install
 
 COPY . .
