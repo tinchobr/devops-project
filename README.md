@@ -1,4 +1,11 @@
 # DevOps Project: Node.js API
+[![Node.js CI](https://github.com/tinchobr/devops-project/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/tinchobr/devops-project/actions/workflows/node.js.yml)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tinchobr_devops-project&metric=alert_status&token=6f3e9350b71d4c6048af2451fe2f8cb457d0373b)](https://sonarcloud.io/summary/new_code?id=tinchobr_devops-project)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tinchobr_devops-project&metric=bugs&token=6f3e9350b71d4c6048af2451fe2f8cb457d0373b)](https://sonarcloud.io/summary/new_code?id=tinchobr_devops-project)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=tinchobr_devops-project&metric=code_smells&token=6f3e9350b71d4c6048af2451fe2f8cb457d0373b)](https://sonarcloud.io/summary/new_code?id=tinchobr_devops-project)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tinchobr_devops-project&metric=coverage&token=6f3e9350b71d4c6048af2451fe2f8cb457d0373b)](https://sonarcloud.io/summary/new_code?id=tinchobr_devops-project)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=tinchobr_devops-project&metric=duplicated_lines_density&token=6f3e9350b71d4c6048af2451fe2f8cb457d0373b)](https://sonarcloud.io/summary/new_code?id=tinchobr_devops-project)
 
 ## Descripción del Proyecto
 Este proyecto es una API RESTful construida con Node.js y Express que permite la gestión de usuarios a través de operaciones CRUD (Crear, Leer, Actualizar y Eliminar). La API incluye un endpoint de verificación de estado para asegurar su correcto funcionamiento.
