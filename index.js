@@ -110,31 +110,6 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 
-//#region solo de prueba
-// Endpoint GET (prueba básica)
-app.get('/test-get', (req, res) => {
-  res.status(200).json({ message: 'GET request successful' });
-});
-
-// Endpoint POST (recibiendo datos en el body)
-app.post('/test-post', (req, res) => {
-  const { data } = req.body;
-  res.status(201).json({ message: 'POST request successful', data });
-});
-
-// Endpoint PUT (actualización)
-app.put('/test-put/:id', (req, res) => {
-  const { id } = req.params;
-  res.status(200).json({ message: `PUT request successful for ID ${id}` });
-});
-
-// Endpoint DELETE
-app.delete('/test-delete/:id', (req, res) => {
-  const { id } = req.params;
-  res.status(204).send();
-});
-//#endregion
-
 Sentry.setupExpressErrorHandler(app);
 
 // Start the server
