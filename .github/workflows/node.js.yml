@@ -33,16 +33,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Verify Quality Gate
-      run: |
-          status=$(curl -s -u ${{ secrets.SONAR_TOKEN }}: \
-            "https://sonarcloud.io/api/qualitygates/project_status?projectKey=tinchobr_devops-project" \
-            | jq -r '.projectStatus.status')
-          echo "Quality Gate status: $status"
-          if [ "$status" != "OK" ]; then
-            echo "Quality Gate failed. Exiting..."
-            exit 1
-          fi
+    - name: SonarQube Quality Gate Check
+      uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
   push_to_docker_hub:
     name: Push Docker image to Docker Hub
