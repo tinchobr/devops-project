@@ -13,6 +13,7 @@ const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 const JWT_SECRET = process.env.JWT_SECRET;
 
+//#region endpoints
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
@@ -103,10 +104,36 @@ app.delete('/users/:id', verifyToken, (req, res) => {
   users = users.filter(u => u.id != id);
   res.status(204).send();
 });
+//#endregion
 
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
+
+//#region solo de prueba
+// Endpoint GET (prueba básica)
+app.get('/test-get', (req, res) => {
+  res.status(200).json({ message: 'GET request successful' });
+});
+
+// Endpoint POST (recibiendo datos en el body)
+app.post('/test-post', (req, res) => {
+  const { data } = req.body;
+  res.status(201).json({ message: 'POST request successful', data });
+});
+
+// Endpoint PUT (actualización)
+app.put('/test-put/:id', (req, res) => {
+  const { id } = req.params;
+  res.status(200).json({ message: `PUT request successful for ID ${id}` });
+});
+
+// Endpoint DELETE
+app.delete('/test-delete/:id', (req, res) => {
+  const { id } = req.params;
+  res.status(204).send();
+});
+//#endregion
 
 Sentry.setupExpressErrorHandler(app);
 
