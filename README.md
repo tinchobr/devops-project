@@ -27,6 +27,8 @@ Este proyecto es una API RESTful construida con Node.js y Express que permite la
   ### Sentry
   <a href="https://sentry.io/" target="blank"><img src="https://www.svgrepo.com/show/354332/sentry-icon.svg" height="80" alt="Sentry Logo" /></a>
 
+  ### SonarQube
+  <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/" target="blank"><img src="https://www.svgrepo.com/show/354365/sonarqube.svg" height="80" alt="SonarQube Logo" /></a>
 
 ## Estructura del Proyecto
 ```
@@ -38,9 +40,11 @@ devops-project/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── index.js
-├── newrelic.js
+├── instrument.js
+├── jest.config.js
 ├── package-lock.json
 ├── package.json
+├── sonar-project.properties
 └── __tests__
 ```
 
