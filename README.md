@@ -24,8 +24,8 @@ Este proyecto es una API RESTful construida con Node.js y Express que permite la
   ### Github Actions
   <a href="https://github.com/features/actions" target="blank"><img src="https://avatars.githubusercontent.com/u/44036562?s=200&v=4" height="80" alt="GitHub Actions Logo" /></a>
   
-  ### New Relic
-  <a href="https://newrelic.com/" target="blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfeSznsWIZTNxHAlwYAjBlW1Oy4CLGQCQbzw&s" height="80" alt="New Relic Logo" /></a>
+  ### Sentry
+  <a href="https://sentry.io/" target="blank"><img src="https://www.svgrepo.com/show/354332/sentry-icon.svg" height="80" alt="Sentry Logo" /></a>
 
 
 ## Estructura del Proyecto
@@ -68,7 +68,7 @@ docker-compose up
 La API estará disponible en `http://localhost:5000`.
 
 ## Monitoreo
-La aplicación está configurada para enviar métricas a New Relic.
+La aplicación está configurada para enviar métricas a Sentry.
 
 ## CI/CD
 Se ha implementado un flujo de trabajo de GitHub Actions para la integración y entrega continua. Esto incluye la instalación de dependencias, la construcción del proyecto, la ejecución de pruebas y el despliegue automático en Render.
