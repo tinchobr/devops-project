@@ -24,4 +24,4 @@ COPY --from=build /app /app
 EXPOSE 5000
 
 # Comando de inicio
-CMD ["node", "-r", "newrelic", "index.js"]
+CMD ["node", "index.js"]

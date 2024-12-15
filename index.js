@@ -1,9 +1,10 @@
 require('dotenv').config();
-require('newrelic');
+const Sentry = require("./instrument.js");
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const crypto = require("crypto");
 const app = express();
+
 app.use(express.json());
 
 let users = []; 
@@ -102,6 +103,8 @@ app.delete('/users/:id', verifyToken, (req, res) => {
   users = users.filter(u => u.id != id);
   res.status(204).send();
 });
+
+Sentry.setupExpressErrorHandler(app);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
