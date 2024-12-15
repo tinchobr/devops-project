@@ -13,6 +13,7 @@ const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 const JWT_SECRET = process.env.JWT_SECRET;
 
+//#region endpoints
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
@@ -103,6 +104,7 @@ app.delete('/users/:id', verifyToken, (req, res) => {
   users = users.filter(u => u.id != id);
   res.status(204).send();
 });
+//#endregion
 
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
